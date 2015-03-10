@@ -1,0 +1,29 @@
+html {
+
+  // common settings
+  body {
+    @include text-style(default);
+    @include semantic-html5-titles;
+
+    #header {
+      @include header;
+    }
+  }
+
+  // homepage elements
+  &.home {
+    section {
+      &#hero {
+        @include hero;
+      }
+
+      &#about {
+        @include about;
+      }
+
+      &#values {
+        @include values;
+      }
+    }
+  }
+}

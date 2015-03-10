@@ -1,0 +1,7 @@
+@mixin article-about {
+  padding: 0 $lem;
+
+  .text {
+    @include text-style(body-text);
+  }
+}

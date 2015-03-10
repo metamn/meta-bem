@@ -1,0 +1,53 @@
+
+
+// Typographic settings for different text types
+// - this file is generated please do not edit
+
+
+// The text mixin
+@mixin text-style($variant) {
+  
+  // Default
+  // - Used when no other settings are specified
+  
+  @if ($variant == 'default') {
+@include font(neuzeit-grotesk-regular);
+    @include typographic-scale(default);
+    
+    
+  }
+  
+  // Body text
+  // - Used for body text
+  
+  @if ($variant == 'body-text') {
+@include font(neuzeit-grotesk-regular);
+    @include typographic-scale(body-text);
+    @include vertical-rhythm;
+    
+    
+  }
+  
+  // Logo
+  // - Used for the logo
+  
+  @if ($variant == 'logo') {
+@include font(neuzeit-grotesk-bold);
+    @include typographic-scale(body-text);
+    @include uppercase(1.2px);
+    
+    
+  }
+  
+  // Navigation
+  // - Used for navigation elements
+  
+  @if ($variant == 'navigation') {
+@include font(neuzeit-grotesk-bold);
+    @include typographic-scale(default);
+    @include uppercase(1.2px);
+    
+    
+  }
+  
+}

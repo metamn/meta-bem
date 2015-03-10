@@ -1,0 +1,14 @@
+@mixin header {
+  display: flex;
+  align-items: center;
+  padding: $lem;
+
+  #logo {
+    display: none;
+    @include logo;
+  }
+
+  #site-title {
+    @include text-style(logo);
+  }
+}

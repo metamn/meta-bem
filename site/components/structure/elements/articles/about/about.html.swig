@@ -1,7 +1,7 @@
-<article>
+<article class="about">
   <h3>Design and code</h3>
 
-  <div class="text">
+  <div class="about__text">
     <p>
       Hello, it's Csongor&mdash;yes I know, it's Hungarian&mdash;a web designer & developer living in Europe.
     </p>

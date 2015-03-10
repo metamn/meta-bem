@@ -118,8 +118,6 @@ var onError = function(error) {
 
 
 
-
-
 // Resize a single image with ImageMagick
 var _image_resize = function(file, size, name) {
   console.log("Resizing image " + file + " to " + size);

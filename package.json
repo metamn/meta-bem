@@ -25,7 +25,8 @@
     "gulp-uncss": "^1.0.0",
     "gulp-util": "^3.0.1",
     "node-sass": "^2.0.1",
-    "run-sequence": "^1.0.1"
+    "run-sequence": "^1.0.1",
+    "yargs": "^3.5.3"
   },
   "dependencies": {
     "gulp-liquify": "0.0.2",

@@ -1,12 +1,10 @@
 @mixin home__about {
-  article {
-    &.about {
-      @include about;
-    }
+  &.about {
+    @include about;
   }
 
-  .button {
+  .view-portfolio {
     margin: $lem;
-    @include button;
+    @include view-portfolio;
   }
 }

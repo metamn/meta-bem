@@ -7,4 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  // Align circle content
+  transform: translateY(-2px);
+
+  .circle__content {
+    transform: translateY(2px);
+  }
 }

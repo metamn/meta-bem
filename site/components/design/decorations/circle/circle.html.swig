@@ -1,1 +1,3 @@
-<span class="circle">{{ content | safe }}</span>
+<span class="circle">
+  <span class="circle__content">{{ content | safe }}</span>
+</span>

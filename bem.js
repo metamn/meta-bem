@@ -98,6 +98,7 @@ var makeModifier = function(path, argv) {
 var argv = require('yargs')
   .usage('Usage: $0 <object> path')
   .command('object', 'The BEM object to be created. It can be [level, block, element, modifier] or [l, b, e, m]')
+  .command('path', 'A normal path except for the Modifier. Please check the examples below')
   .example('$0 level components/framework')
   .example('$0 block components/framework/header')
   .example('$0 element components/framework/header/logo')

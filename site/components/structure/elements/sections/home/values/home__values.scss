@@ -1,26 +1,26 @@
-@mixin values {
+@mixin home__values {
   article {
-    &#ui {
+    &.ui {
       @include ui;
     }
 
-    &#interactions {
+    &.interactions {
       @include interactions;
     }
 
-    &#ux {
+    &.ux {
       @include ux;
     }
 
-    &#styleguide {
+    &.styleguide {
       @include styleguide;
     }
 
-    &#workflow {
+    &.workflow {
       @include workflow;
     }
 
-    &#wordpress {
+    &.wordpress {
       @include wordpress;
     }
   }

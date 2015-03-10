@@ -1,6 +1,8 @@
-@mixin about {
+@mixin home__about {
   article {
-    @include article-about;
+    &.about {
+      @include about;
+    }
   }
 
   .button {

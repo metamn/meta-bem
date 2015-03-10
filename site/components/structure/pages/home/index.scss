@@ -5,7 +5,7 @@ html {
     @include text-style(default);
     @include semantic-html5-titles;
 
-    #header {
+    .header {
       @include header;
     }
   }
@@ -13,16 +13,12 @@ html {
   // homepage elements
   &.home {
     section {
-      &#hero {
-        @include hero;
+      &.home__about {
+        @include home__about;
       }
 
-      &#about {
-        @include about;
-      }
-
-      &#values {
-        @include values;
+      &.home__values {
+        @include home__values;
       }
     }
   }

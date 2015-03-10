@@ -52,11 +52,37 @@ var makeElement = function(path) {
   block = splits[splits.length - 2];
 
   folder = path.replace(element, '') + '__' + element;
-  makeFolder(folder);
-
   filename = block + '__' + element;
   file = folder + '/' + filename;
 
+  makeFolder(folder);
+  makeFile(file + '.html.swig', filename);
+  makeFile(file + '.scss', "@mixin " + filename + " {}");
+}
+
+
+// Create a Modifier
+var makeModifier = function(path, argv) {
+  modifier = argv._[2];
+  if (!modifier) {
+    console.log("Modifier missing");
+    return;
+  }
+
+  value = argv._[3];
+  if (!value) {
+    console.log("Modifier value missing");
+    return;
+  }
+
+  splits = path.split('/');
+  element = splits[splits.length - 1];
+  block = splits[splits.length - 2];
+  filename = block + element + '_' + modifier + '_' + value;
+  folder = path + '/_' + modifier;
+  file = folder + '/' + filename;
+
+  makeFolder(folder);
   makeFile(file + '.html.swig', filename);
   makeFile(file + '.scss', "@mixin " + filename + " {}");
 }
@@ -75,6 +101,7 @@ var argv = require('yargs')
   .example('$0 level components/framework')
   .example('$0 block components/framework/header')
   .example('$0 element components/framework/header/logo')
+  .example('$0 modifier components/framework/header/__logo state hover')
   .demand(2)
   .argv;
 
@@ -94,6 +121,10 @@ switch (object) {
   case 'element':
   case 'e':
     makeElement(path);
+    break;
+  case 'modifier':
+  case 'm':
+    makeModifier(path, argv);
     break;
   default:
     console.log('Wrong BEM object: ' + object);

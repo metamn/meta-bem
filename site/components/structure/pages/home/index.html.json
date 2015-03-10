@@ -1,12 +1,5 @@
 {
   "home": {
-    "hero": {
-      "video": {
-        "id": "video__design-and-code",
-        "image": "hero.png",
-        "mp4": "hero.mp4"
-      }
-    },
     "about": {
       "button": {
         "text": "View portfolio",

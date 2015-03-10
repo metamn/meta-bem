@@ -1,9 +1,0 @@
-@mixin header {
-  display: flex;
-  align-items: center;
-  padding: $lem;
-
-  .logo {
-    @include logo;
-  }
-}

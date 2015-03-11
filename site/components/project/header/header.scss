@@ -1,1 +1,5 @@
-@mixin header {}
+@mixin header {
+  .logo {
+    @include logo;
+  }
+}

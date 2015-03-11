@@ -1,1 +1,7 @@
-@mixin home {}
+html {
+  body {
+    .header {
+      @include header;
+    }
+  }
+}

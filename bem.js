@@ -56,7 +56,7 @@ var makeElement = function(path) {
   file = folder + '/' + filename;
 
   makeFolder(folder);
-  makeFile(file + '.html.swig', filename);
+  makeFile(file + '.html.swig', '< class="' + filename + '">');
   makeFile(file + '.scss', "@mixin " + filename + " {}");
 }
 
@@ -83,7 +83,7 @@ var makeModifier = function(path, argv) {
   file = folder + '/' + filename;
 
   makeFolder(folder);
-  makeFile(file + '.html.swig', filename);
+  makeFile(file + '.html.swig', '< class="' + filename + '">');
   makeFile(file + '.scss', "@mixin " + filename + " {}");
 }
 

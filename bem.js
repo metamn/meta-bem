@@ -40,7 +40,7 @@ var makeBlock = function(path) {
   block = splits[splits.length - 1];
   file = path + '/' + block;
 
-  makeFile(file + '.html.swig', block);
+  makeFile(file + '.html.swig', '< class="' + block + '">');
   makeFile(file + '.scss', "@mixin " + block + " {}");
 }
 

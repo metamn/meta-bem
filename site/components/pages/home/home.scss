@@ -1,1 +1,3 @@
-@mixin home {}
+.home__about {
+  @include home__about;
+}
